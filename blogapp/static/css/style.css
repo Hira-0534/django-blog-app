@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+h2 {
+    color: rgb(112, 26, 232);
+    margin-top: 0;
+}
+
+/* Yahan naya post card style add karein */
+.post-card {
+    background-color: rgb(162, 173, 111);       /* Card ka background color */
+    padding: 20px;                 /* Andar ki taraf space */
+    margin-bottom: 20px;           /* Do posts ke darmiyan fasla */
+    border-radius: 8px;            /* Konon ko thora gol karne ke liye */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Halka sa shadow effect */
+}

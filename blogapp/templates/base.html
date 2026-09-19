@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>blogapp</title>
+</head>
+<body>
+    <nav>
+        
+    <a href="{% url 'blogapp:home' %}">home</a>
+    <a href="{% url 'blogapp:about' %}">about</a>
+    {%if user.is_authenticated %}
+        <a href="{% url 'blogapp:create_post' %}">Create Post</a>
+        <a href="{% url 'blogapp:my_posts' %}">My Posts</a> 
+        <a href="{% url 'blogapp:logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'blogapp:register' %}">Register</a>
+        <a href="{% url 'blogapp:login' %}">Login</a>
+    {% endif %}
+    
+    
+    </nav>
+    <hr>
+
+    {% block content %}
+
+    {% endblock %}
+    {% include 'components/footer.html' %}
+</body>
+</html>

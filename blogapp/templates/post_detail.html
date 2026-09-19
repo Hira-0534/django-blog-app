@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+
+<p>
+    {{ post.content }}
+</p>
+
+<p>
+    <small>Published on: {{ post.created_at }}</small>
+</p>
+
+<a href="{% url 'blogapp:home' %}">Back to Home</a>
+{% endblock %}
